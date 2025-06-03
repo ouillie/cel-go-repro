@@ -1,0 +1,9 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "cel-test",
+    srcs = ["lib.go"],
+    importpath = "github.com/jarreds/cel_go_repro/cel-test",
+    visibility = ["//visibility:public"],
+    deps = ["@com_github_google_cel_go//cel:go_default_library"],
+)
